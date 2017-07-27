@@ -17,6 +17,7 @@ public class Notebook {
     private String mobilePhoneNumber;
     private String secondMobilePhoneNumber;
     private String email;
+    private String skype;
     private Address address;
     private Date creationDate;
     private Date dateOfLastChange;
@@ -24,7 +25,7 @@ public class Notebook {
     public Notebook(String name, String surname, String patronymic, String nickname,
                     SubscriberGroup subscriberGroup, String homePhoneNumber,
                     String mobilePhoneNumber, String secondMobilePhoneNumber,
-                    String email, Address address) {
+                    String email, String skype, Address address) {
         this.name = name;
         this.surname = surname;
         this.patronymic = patronymic;
@@ -34,6 +35,7 @@ public class Notebook {
         this.mobilePhoneNumber = mobilePhoneNumber;
         this.secondMobilePhoneNumber = secondMobilePhoneNumber;
         this.email = email;
+        this.skype = skype;
         this.address = address;
         creationDate = new Date();
         dateOfLastChange = new Date();
@@ -120,6 +122,15 @@ public class Notebook {
         dateOfLastChange = new Date();
     }
 
+    public String getSkype() {
+        return skype;
+    }
+
+    public void setSkype(String skype) {
+        this.skype = skype;
+        dateOfLastChange = new Date();
+    }
+
     public Address getAddress() {
         return address;
     }
@@ -144,18 +155,19 @@ public class Notebook {
     @Override
     public String toString() {
         return "Notebook{" +
-                "name='" + name + '\n' +
-                ", surname='" + surname + '\n' +
-                ", patronymic='" + patronymic + '\n' +
-                ", nickname='" + nickname + '\n' +
-                ", subscriberGroup=" + subscriberGroup +
-                ", homePhoneNumber='" + homePhoneNumber + '\n' +
-                ", mobilePhoneNumber='" + mobilePhoneNumber + '\n' +
-                ", secondMobilePhoneNumber='" + secondMobilePhoneNumber + '\n' +
-                ", email='" + email + '\n' +
-                ", address=" + address +
-                ", creationDate=" + creationDate +
-                ", dateOfLastChange=" + dateOfLastChange +
+                "name='" + name + '\'' +
+                "\n surname='" + surname + '\'' +
+                "\n patronymic='" + patronymic + '\'' +
+                "\n nickname='" + nickname + '\'' +
+                "\n subscriberGroup=" + subscriberGroup +
+                "\n homePhoneNumber='" + homePhoneNumber + '\'' +
+                "\n mobilePhoneNumber='" + mobilePhoneNumber + '\'' +
+                "\n secondMobilePhoneNumber='" + secondMobilePhoneNumber + '\'' +
+                "\n email='" + email + '\'' +
+                "\n skype='" + skype + '\'' +
+                "\n address=" + address +
+                "\n creationDate=" + creationDate +
+                "\n dateOfLastChange=" + dateOfLastChange +
                 '}';
     }
 }

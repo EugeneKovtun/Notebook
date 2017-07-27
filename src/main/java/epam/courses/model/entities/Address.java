@@ -68,13 +68,12 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address{" +
-                "index=" + index + '\n' +
-                ", city='" + city + '\n' +
-                ", street='" + street + '\n' +
-                ", homeNumber=" + homeNumber + '\n' +
-                ", flatNumber=" + flatNumber +
-                '}' + '\n';
+        return "{" +
+                "\nindex=" + index +
+                "\n city='" + city + '\'' +
+                "\n street='" + street + '\'' +
+                "\n homeNumber=" + homeNumber +
+                "\n flatNumber=" + flatNumber +
+                '}';
     }
-
 }

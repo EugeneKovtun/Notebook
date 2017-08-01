@@ -21,15 +21,15 @@ public class Controller {
     public void processUser() {
         view.printMessage(ConstantMessage.MENU);
         Input input = new Input(view);
-        int choise = input.inputIntegerWithScanner();
-        while (choise != 2) {
-            if (choise == 1) {
+        int choice = input.inputIntegerWithScanner();
+        while (choice != 2) {
+            if (choice == 1) {
                 add();
             } else {
                 view.printMessage(ConstantMessage.WRONG_INPUT);
             }
             view.printMessage(ConstantMessage.MENU);
-            choise = input.inputIntegerWithScanner();
+            choice = input.inputIntegerWithScanner();
         }
         view.printMessage(Arrays.toString(model.getNotebookList().toArray()));
     }

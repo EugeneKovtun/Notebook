@@ -1,6 +1,7 @@
 package epam.courses.controller;
 
 import epam.courses.model.entities.Address;
+import epam.courses.model.entities.AddressBuilder;
 import epam.courses.view.ConstantMessage;
 import epam.courses.view.View;
 
@@ -26,6 +27,13 @@ public class AddressController {
         int homeNumber = input.inputIntegerWithScanner();
         view.printMessage(view.concatenateString(ConstantMessage.INPUT, ConstantMessage.FLAT));
         int flatNumber = input.inputIntegerWithScanner();
-        return new Address(index, city, street, homeNumber, flatNumber);
+        Address address = new AddressBuilder()
+                .buildIndex(index)
+                .buildCity(city)
+                .buildStreet(street)
+                .buildHomeNumber(homeNumber)
+                .buildFlatNumber(flatNumber)
+                .build();
+        return address;
     }
 }

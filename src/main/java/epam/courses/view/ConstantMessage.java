@@ -22,6 +22,5 @@ public interface ConstantMessage {
     String ADD_SECOND_PHONE = "Do you want to add second phone?";
     String EMAIL = "email";
     String SKYPE = "skype";
-    String MENU = "1 - add contact\n" +
-            "2 - show all";
+    String MENU = "menu";
 }

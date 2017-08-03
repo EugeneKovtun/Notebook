@@ -19,7 +19,7 @@ public class Controller {
     }
 
     public void processUser() {
-        view.printMessage(ConstantMessage.MENU);
+        view.showMenu();
         Input input = new Input(view);
         int choice = input.inputIntegerWithScanner();
         while (choice != 2) {
@@ -28,7 +28,7 @@ public class Controller {
             } else {
                 view.printMessage(ConstantMessage.WRONG_INPUT);
             }
-            view.printMessage(ConstantMessage.MENU);
+            view.showMenu();
             choice = input.inputIntegerWithScanner();
         }
         view.printMessage(Arrays.toString(model.getNotebookList().toArray()));
